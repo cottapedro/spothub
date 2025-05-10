@@ -32,5 +32,14 @@ public class Lyrics {
 
     @Column(nullable = false)
     private Integer timestamp;
+
+
+    public Lyrics(Track track, String language, String line, String translatedLine, Integer timestamp) {
+        this.track = track;
+        this.language = language;
+        this.line = line;
+        this.translatedLine = translatedLine;
+        this.timestamp = timestamp;
+    }
 }
 

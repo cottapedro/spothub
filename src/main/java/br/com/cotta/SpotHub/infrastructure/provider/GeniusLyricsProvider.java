@@ -1,5 +1,6 @@
 package br.com.cotta.SpotHub.infrastructure.provider;
 
+import br.com.cotta.SpotHub.domain.port.LyricsProvider;
 import dev.spoocy.genius.GeniusClient;
 import dev.spoocy.genius.core.GeniusClientBuilder;
 import dev.spoocy.genius.data.Lyrics;
@@ -17,7 +18,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 @Component
-public class GeniusLyricsProvider {
+public class GeniusLyricsProvider implements LyricsProvider {
     private String clientId = "WA8wiSe1ZQNmnmLo2y8Br-YjBGS5G6dUCDgqvZgff2Pud3fXivJYKn3oSlGYM_jX";
     private String clientSecret = "bw4YnK6AsxG2gG9s5DdAeUj6Tm20aJNS4ssQXDvKMioXaGzYuocdcO0j8vUAKGlsPU3Q3bPVR-U55zdO6IrPxg";
     private String authorizationToken = "PlLRdkzES-jHPs-wEY9OcmXpuv7B0IUu-fBzmY3E9095LILvl26BaALqT9CgzTg2";
